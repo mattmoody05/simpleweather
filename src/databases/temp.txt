@@ -1,0 +1,1 @@
+This is a temporary file that is needed, otherwise the "databases" folder will not be pushed to github, you can ignore this
