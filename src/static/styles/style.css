@@ -1,0 +1,191 @@
+/* Importing the source sans pro font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+/* Global formatting */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Source Sans Pro;
+}
+body {
+    background-image: url("../img/firewatch.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    backdrop-filter: blur(7px);
+    overflow: hidden;
+}
+
+/* Vertically and horizontally centering the weather information elements */
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Formatting the heading section */
+.heading h1 {
+    font-size: 50px;
+}
+.heading h2 {
+    font-size: 25px;
+}
+.heading {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+/* Formatting the weather content section */
+.weather-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    text-align: center;
+}
+.weather-entry {
+    font-size: 20px;
+}
+
+/* Input boxes & buttons formatting */
+input {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    transition-duration: 0.3s;
+    font-size: 20px;
+}
+input:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    color: white;
+    padding: 10px 30px 10px 30px;
+}
+input:focus {
+    box-shadow: none;
+    outline: none;
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    color: #000000;
+}
+input:focus::placeholder {
+    color: #313131;
+}
+input::placeholder {
+    color: #ffffff;
+}
+.postcodeinput a {
+    color: #ffffff;
+}
+.postcodeinput input {
+    margin-left: 10px;
+}
+.loginform a {
+    color: #ffffff;
+}
+.loginform {
+    text-align: center;
+}
+.loginform input {
+    margin-bottom: 10px;
+}
+
+/* Formatting for the error pages */
+.confirmation-error {
+    text-align: center;
+}
+.confirmation-error h1 {
+    font-size: 50px;
+}
+.confirmation-error h2 {
+    font-size: 20px;
+}
+.confirmation-error a {
+    color: #ffffff;
+}
+.confirmation-error a:visited {
+    color: #ffffff;
+}
+
+
+
+
+
+
+.userpage-header {
+    background-color: #ffffff28;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    padding: 10px;
+}
+
+.logout-form {
+    text-align: right;
+}
+
+button {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    transition-duration: 0.3s;
+    font-size: 20px;
+}
+
+button:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    color: white;
+    padding: 5px 25px 5px 25px;
+}
+
+button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.add-postcode input {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    transition-duration: 0.3s;
+    font-size: 20px;
+}
+
+.add-postcode input:focus {
+    box-shadow: none;
+    outline: none;
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+    color: #000000;
+}
+
+.add-postcode input:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    padding: 5px 20px 5px 20px;
+}
+
+.userpostcodes button {
+    margin: 5px;
+}
+
+.userpostcodes {
+    text-align: center;
+}

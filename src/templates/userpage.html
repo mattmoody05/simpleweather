@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - {{ title }}</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <div class="userpage-header">
+        <div class="email-display">
+            <h1>Logged in as: {{ email }}</h1>
+        </div>
+        <div class="logout-form">
+            <form method="POST">
+                <button type="submit" value="logout" name="button">Logout</button>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="userpostcodes">
+            <h1>Select a postcode to view weather...</h1><br>
+            <form method="POST">
+                {% for postcode in user_postcodes %}
+                    <button type="submit" value="{{ postcode }}" name="button">{{ postcode }}</button>
+                {% endfor %}
+            </form>
+            <br><br>
+            <div class="add-postcode">
+                <h1>Add a new postcode...</h1><br>
+                <form method="POST">
+                    <input type="text" name="entered-postcode">
+                    <button type="submit" value="addpostcode" name="button">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

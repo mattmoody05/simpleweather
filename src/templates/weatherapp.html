@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script src="/static/scripts/clock.js"></script>
+</head>
+<body onload="startTime()"> 
+<div class="content">
+    <div class="stuff">
+    <div class="heading">
+        <h1>Weather</h1>
+        <h2>{{ address['city'] }}, {{ address['country'] }}</h2>
+        <h2 id="clock"></h2>
+    </div>
+    <div class="weather-content">
+        {% for i in range(7) %}
+            <div class="weather-entry">
+                {% if weatherdata[i].status == "Rain" %}
+                    <img src="https://img.icons8.com/android/28/ffffff/rain.png"/>
+                {% elif weatherdata[i].status == "Thunderstorm" %}
+                    <img src="https://img.icons8.com/android/28/ffffff/storm.png"/>
+                {% elif weatherdata[i].status == "Drizzle" %}
+                    <img src="https://img.icons8.com/android/28/ffffff/light-rain-2.png"/>
+                {% elif weatherdata[i].status == "Snow" %}
+                    <img src="https://img.icons8.com/android/28/ffffff/winter.png"/>
+                {% elif weatherdata[i].status == "Clear" %}
+                    <img src="https://img.icons8.com/android/28/ffffff/sun.png"/>
+                {% else %}
+                    <img src="https://img.icons8.com/android/28/ffffff/clouds.png"/>
+                {% endif %}
+                <p>{{ hourdata[i] }}</p>
+                <p>{{ weatherdata[i].status }}</p>
+                <p>{{ weatherdata[i].temperature('celsius')['temp'] }}°C</p>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+</div>
+</body>
+</html>

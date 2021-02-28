@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="heading">
+        <h1>Weather</h1>
+        <br>
+        <div class="postcodeinput">
+            <form method="POST">
+                <input type="text" placeholder="Postcode" required name="postcode">
+                <input type="submit">
+            </form>
+            <br>
+            <h2>Want to save postcodes? <a href="{{ url_for('user') }}">Click here</a> to view and save them</h2>
+        </div>
+    </div>
+{% endblock %}
