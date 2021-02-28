@@ -71,7 +71,6 @@ def add_user_postcode(email, postcode):
 "FUNCTION TO CHECK IF THE POSTCODE IS VALID"
 def verify_postcode(postcode):
     response = requests.get(f"http://api.postcodes.io/postcodes/{postcode}").json()
-    print(response)
     if response['status'] != 200:
         return False
     else:

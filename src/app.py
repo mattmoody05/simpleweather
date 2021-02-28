@@ -202,4 +202,4 @@ def user_post():
 
 """RUNNING THE FLASK APP"""
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0") 
+    app.run(debug=False, host="0.0.0.0") 
